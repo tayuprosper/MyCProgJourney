@@ -16,14 +16,18 @@ int main(){
         printf("OOPs!! There was a problem allocation the memory\n");
     }else{
         printf("Hurray!! Memory allocated succefully\n");
-        printf("The location is at %p\n",data);
+        printf("The location is at %p\n\n",data);
     }
 //fill the memory block with number from 0 to n for example
     for (int i = 0; i<=  9; i++){
         data[i] = i+1;
     }
+
+//print memory location and coresponding vallues
 for (int i = 0; i<=  9; i++){
-        printf(" At %p we have %d ",data[i],data[i]);
+        printf("At %p we have %d \n",data[i],data[i]);
     }
+//free the alocated memory when finished
+    free(data);
 return 0;
 }
